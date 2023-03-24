@@ -7,7 +7,7 @@ public class Main {
 		Cotxe cotxe1 = new Cotxe(30);
 		
 		Cotxe.frenar();
-		
+		 
 		cotxe1.accelerar();
 		
 	}
