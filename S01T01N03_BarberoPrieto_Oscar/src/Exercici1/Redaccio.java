@@ -29,15 +29,24 @@ public abstract class Redaccio {
 			try {
 				opcioMenu = introNumber("Escull una opció: ");
 				switch (opcioMenu) {
-				case 1 -> introduirRedactor();
-				case 2 -> eliminarRedactor();
-				case 3 -> menu2();
-				case 4 -> eliminarNoticia();
-				case 5 -> getNoticies();
-				case 6 ->puntuacioNoticia();
-				case 7 -> preuNoticia();
-				case 8 -> sortir = true;
-				default -> System.out.println("Solament números entre 1 i 8.\n");
+				case 1:
+					introduirRedactor();
+				case 2:
+					eliminarRedactor();
+				case 3:
+					menu2();
+				case 4:
+					eliminarNoticia();
+				case 5:
+					getNoticies();
+				case 6:
+					puntuacioNoticia();
+				case 7:
+					preuNoticia();
+				case 8:
+					sortir = true;
+				default:
+					System.out.println("Solament números entre 1 i 8.\n");
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Cal ficar un número.\n");
@@ -60,13 +69,20 @@ public abstract class Redaccio {
 			try {
 				opcioMenu = introNumber("Escull una opció: ");
 				switch (opcioMenu) {
-				case 1 -> addNoticiaFutbol();
-				case 2 -> addNoticiaBasquet();
-				case 3 -> addNoticiaTenis();
-				case 4 -> addNoticiaF1();
-				case 5 -> addNoticiaMotociclisme();
-				case 6 -> sortir = true;
-				default -> System.out.println("Solament números entre 1 i 6.\n");
+				case 1:
+					addNoticiaFutbol();
+				case 2:
+					addNoticiaBasquet();
+				case 3:
+					addNoticiaTenis();
+				case 4:
+					addNoticiaF1();
+				case 5:
+					addNoticiaMotociclisme();
+				case 6:
+					sortir = true;
+				default:
+					System.out.println("Solament números entre 1 i 6.\n");
 				}
 			} catch (InputMismatchException e) {
 				System.out.println("Cal ficar un número.\n");
@@ -217,13 +233,6 @@ public abstract class Redaccio {
 
 		Noticia noticia = recuperarNoticia();
 		System.out.println(noticia.calcularPreuNoticia());
-	}
-
-	public static void lista() {
-
-		for (Redactor redactor : bbddRedactors) {
-			System.out.println(redactor);
-		}
 	}
 
 	public static String introWord(String missatge) {
